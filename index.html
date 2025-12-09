@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="res/styles/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="res/scripts/selection_groups.js"></script>
+    <title>Ue5-Forge</title>
+</head>
+<body>
+    <div id="buy-me-a-coffee">
+        <a href="https://www.buymeacoffee.com/Jakobdreisw"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="Jakobdreisw" /></a>
+    </div>
+    <header>
+        <h1>Ue5-Forge</h1>
+    </header>
+    <main>
+        <div id="introduction">
+           <p>All Templates you can create are including the basics, like jumping or running.<br>Ue5-Forge is a tool to create templates for Unreal Engine 5.6.1. <br> More supported versions are comming soon.</p> 
+        </div>
+        <div id="form">
+            <h2>Basic informations</h2>
+            <div class="title">
+                <input type="text" placeholder="Template name" id="titleInput">
+            </div>
+            <div class="description">
+                <input type="text" placeholder="Description" id="desscriptionInput">
+            </div>
+
+            <h2>Engine Version</h2>
+            <div class="ue-version">
+                <input type="text" placeholder="Unreal version (5.6.1)" id="titleInput">
+            </div>
+
+            <h2>Systems</h2>
+            <div class="systems">
+                <fieldset class="category1-fieldset" style="border:1px solid #e0e0e0;padding:12px;border-radius:8px;background:#fafafa;">
+                    <legend style="font-weight:600;padding:0 6px;">Template</legend>
+                    <div class="category1-grid" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;">
+                        <label for="thirdperson" onclick="(function(cb){cb.checked = !cb.checked; cb.dispatchEvent(new Event('change',{bubbles:true}));})(this.querySelector('input[type=checkbox]'))" style="display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:6px;cursor:pointer;background:#fff;border:1px solid #ececec;position:relative;">
+                            <input type="checkbox" id="thirdperson" name="character" value="thirdperson" data-group="category1" style="width:16px;height:16px;pointer-events:auto;position:relative;z-index:2;margin:0;">
+                            <span style="display:inline-flex;align-items:center;gap:8px;pointer-events:none;">
+                                <span aria-hidden="true">🎮</span>
+                                <span>Thirdperson</span>
+                            </span>
+                        </label>
+
+                        <label for="firstperson" onclick="(function(cb){cb.checked = !cb.checked; cb.dispatchEvent(new Event('change',{bubbles:true}));})(this.querySelector('input[type=checkbox]'))" style="display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:6px;cursor:pointer;background:#fff;border:1px solid #ececec;position:relative;">
+                            <input type="checkbox" id="firstperson" name="character" value="firstperson" data-group="category1" style="width:16px;height:16px;pointer-events:auto;position:relative;z-index:2;margin:0;">
+                            <span style="display:inline-flex;align-items:center;gap:8px;pointer-events:none;">
+                                <span aria-hidden="true">👁️</span>
+                                <span>Firstperson</span>
+                            </span>
+                        </label>
+                    </div>
+                    <small style="display:block;margin-top:8px;color:#666;">Choose your preferred perspective — multiple selections are not possible.</small>
+                </fieldset>
+
+                <fieldset class="systems-fieldset" style="border:1px solid #e0e0e0;padding:12px;border-radius:8px;background:#fafafa;">
+                    <legend style="font-weight:600;padding:0 6px;">Other Systems</legend>
+                    <div class="systems-grid" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;">
+                        <label for="damagesystem" onclick="(function(cb){cb.checked = !cb.checked; cb.dispatchEvent(new Event('change',{bubbles:true}));})(this.querySelector('input[type=checkbox]'))" style="display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:6px;cursor:pointer;background:#fff;border:1px solid #ececec;position:relative;">
+                            <input type="checkbox" id="damagesystem" name="damagesystem" value="damagesystem" style="width:16px;height:16px;pointer-events:auto;position:relative;z-index:2;margin:0;">
+                            <span style="display:inline-flex;align-items:center;gap:8px;pointer-events:none;">
+                                <span aria-hidden="true">💥</span>
+                                <span>Damagesystem</span>
+                            </span>
+                        </label>
+
+                        <label for="healthsystem" onclick="(function(cb){cb.checked = !cb.checked; cb.dispatchEvent(new Event('change',{bubbles:true}));})(this.querySelector('input[type=checkbox]'))" style="display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:6px;cursor:pointer;background:#fff;border:1px solid #ececec;position:relative;">
+                            <input type="checkbox" id="healthsystem" name="healthsystem" value="healthsystem" style="width:16px;height:16px;pointer-events:auto;position:relative;z-index:2;margin:0;">
+                            <span style="display:inline-flex;align-items:center;gap:8px;pointer-events:none;">
+                                <span aria-hidden="true">❤️</span>
+                                <span>Healthsystem</span>
+                            </span>
+                        </label>
+
+                        <label for="interactionsystem" onclick="(function(cb){cb.checked = !cb.checked; cb.dispatchEvent(new Event('change',{bubbles:true}));})(this.querySelector('input[type=checkbox]'))" style="display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:6px;cursor:pointer;background:#fff;border:1px solid #ececec;position:relative;">
+                            <input type="checkbox" id="interactionsystem" name="interactionsystem" value="interactionsystem" style="width:16px;height:16px;pointer-events:auto;position:relative;z-index:2;margin:0;">
+                            <span style="display:inline-flex;align-items:center;gap:8px;pointer-events:none;">
+                                <span aria-hidden="true">🤝</span>
+                                <span>Interactionsystem <br> (for objects)</span>
+                            </span>
+                        </label>
+                    </div>
+                    <small style="display:block;margin-top:8px;color:#666;">Choose one or more systems — you can't adjust your selection later.</small>
+                </fieldset>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

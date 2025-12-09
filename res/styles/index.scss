@@ -1,0 +1,158 @@
+//Variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-stack: 'roboto-mono', monospace;
+$font-color: #333;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-stack;
+}
+
+#buy-me-a-coffee {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+
+    img {
+        width: 200px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+header {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06);
+    padding: 20px;
+    text-align: center;
+    color: rgba(44,82,130);
+    padding: 2%;
+}
+
+main {
+    padding: 20px;
+
+    #introduction {
+        font-size: 1.2em;
+        color: $font-color;
+        text-align: center;
+    }
+
+    #form {
+        /* zentriert horizontal und responsive */
+        margin: 3% auto;
+        width: 90%;
+        max-width: 900px;
+        padding: 5%;
+        font-size: larger;
+        color: $font-color;
+ 
+        background: #ffffffee;
+        border-radius: 12px;
+        box-shadow: 0 8px 30px rgba(32,41,61,0.06);
+        border: 1px solid rgba(0,0,0,0.03);
+
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            margin-top: 3%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            border-left-width: 0;
+            border-top-width: 0;
+            border-right-width: 0;
+            padding-bottom: .25rem;
+            margin: 1rem;
+            font-size: 1.4rem;
+            width: 30rem;
+            
+            &:focus {
+                outline: none;
+                border-color: $primary-color;
+            }
+        }
+
+        .systems {
+            margin-top: 2%;
+            margin-bottom: 2%;
+            font-size: 1.2rem;
+            color: $font-color;
+
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            // Kategorie-Checkboxen (nur eine wählbar) als Pill-Buttons
+            input[type="checkbox"][data-group] {
+                position: absolute;
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            input[type="checkbox"][data-group] + label {
+                display: inline-flex;
+                align-items: center;
+                gap: .6rem;
+                padding: .4rem 1rem;
+                margin-right: .5rem;
+                border-radius: 999px;
+                border: 1px solid rgba(52,152,219,0.15);
+                background: rgba(52,152,219,0.03);
+                color: darken($font-color, 10%);
+                cursor: pointer;
+                transition: all 0.15s ease-in-out;
+                font-weight: 600;
+            }
+
+            input[type="checkbox"][data-group] + label::before {
+                content: '';
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                background: rgba(255,255,255,0.6);
+                box-shadow: inset 0 0 0 2px rgba(0,0,0,0.06);
+            }
+
+            input[type="checkbox"][data-group]:checked + label {
+                background: $primary-color;
+                color: #fff;
+                border-color: darken($primary-color, 5%);
+            }
+
+            input[type="checkbox"][data-group]:checked + label::before {
+                background: #fff;
+            }
+
+            // Weitere Systeme: normale Checkboxen, aber mit klarer Darstellung
+            input[type="checkbox"]:not([data-group]) {
+                width: auto;
+                margin-right: 8px;
+                accent-color: $primary-color;
+            }
+
+            input[type="checkbox"]:not([data-group]) + label {
+                display: inline-flex;
+                align-items: center;
+                margin-right: 1rem;
+                cursor: pointer;
+                font-weight: 500;
+            }
+        }
+    }
+}
