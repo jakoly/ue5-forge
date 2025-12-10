@@ -129,4 +129,36 @@ main #form .systems input[type=checkbox]:not([data-group]) + label {
   margin-right: 1rem;
   cursor: pointer;
   font-weight: 500;
+}
+main #form .form-actions {
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+main #form button#downloadBtn {
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: #3498db;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+main #form button#downloadBtn:hover {
+  background: rgb(33.1380753138, 125.1882845188, 186.8619246862);
+  box-shadow: 0 6px 16px rgba(52, 152, 219, 0.4);
+  transform: translateY(-2px);
+}
+main #form button#downloadBtn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+}
+main #form button#downloadBtn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
 }/*# sourceMappingURL=index.css.map */

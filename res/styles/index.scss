@@ -154,5 +154,42 @@ main {
                 font-weight: 500;
             }
         }
+
+        .form-actions {
+            margin-top: 3%;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        button#downloadBtn {
+            padding: 12px 32px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+            background: $primary-color;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+
+            &:hover {
+                background: darken($primary-color, 10%);
+                box-shadow: 0 6px 16px rgba(52, 152, 219, 0.4);
+                transform: translateY(-2px);
+            }
+
+            &:active {
+                transform: translateY(0);
+                box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+            }
+
+            &:disabled {
+                background: #ccc;
+                cursor: not-allowed;
+                box-shadow: none;
+            }
+        }
     }
 }

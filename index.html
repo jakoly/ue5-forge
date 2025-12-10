@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="res/styles/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="res/scripts/selection_groups.js"></script>
+    <script src="res/scripts/download_handler.js"></script>
     <title>Ue5-Forge</title>
 </head>
 <body>
@@ -37,19 +38,19 @@
                 <fieldset class="category1-fieldset" style="border:1px solid #e0e0e0;padding:12px;border-radius:8px;background:#fafafa;">
                     <legend style="font-weight:600;padding:0 6px;">Template</legend>
                     <div class="category1-grid" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;">
-                        <label for="thirdperson" onclick="(function(cb){cb.checked = !cb.checked; cb.dispatchEvent(new Event('change',{bubbles:true}));})(this.querySelector('input[type=checkbox]'))" style="display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:6px;cursor:pointer;background:#fff;border:1px solid #ececec;position:relative;">
-                            <input type="checkbox" id="thirdperson" name="character" value="thirdperson" data-group="category1" style="width:16px;height:16px;pointer-events:auto;position:relative;z-index:2;margin:0;">
+                        <label for="damagesystem" onclick="(function(cb){cb.checked = !cb.checked; cb.dispatchEvent(new Event('change',{bubbles:true}));})(this.querySelector('input[type=checkbox]'))" style="display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:6px;cursor:pointer;background:#fff;border:1px solid #ececec;position:relative;">
+                            <input type="checkbox" id="thirdPerson" name="thirdPerson" value="thirdPerson" style="width:16px;height:16px;pointer-events:auto;position:relative;z-index:2;margin:0;">
                             <span style="display:inline-flex;align-items:center;gap:8px;pointer-events:none;">
                                 <span aria-hidden="true">🎮</span>
-                                <span>Thirdperson</span>
+                                <span>Third Person</span>
                             </span>
                         </label>
 
-                        <label for="firstperson" onclick="(function(cb){cb.checked = !cb.checked; cb.dispatchEvent(new Event('change',{bubbles:true}));})(this.querySelector('input[type=checkbox]'))" style="display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:6px;cursor:pointer;background:#fff;border:1px solid #ececec;position:relative;">
-                            <input type="checkbox" id="firstperson" name="character" value="firstperson" data-group="category1" style="width:16px;height:16px;pointer-events:auto;position:relative;z-index:2;margin:0;">
+                        <label for="firstPerson" onclick="(function(cb){cb.checked = !cb.checked; cb.dispatchEvent(new Event('change',{bubbles:true}));})(this.querySelector('input[type=checkbox]'))" style="display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:6px;cursor:pointer;background:#fff;border:1px solid #ececec;position:relative;">
+                            <input type="checkbox" id="firstPerson" name="firstPerson" value="firstPerson" style="width:16px;height:16px;pointer-events:auto;position:relative;z-index:2;margin:0;">
                             <span style="display:inline-flex;align-items:center;gap:8px;pointer-events:none;">
                                 <span aria-hidden="true">👁️</span>
-                                <span>Firstperson</span>
+                                <span>First Person</span>
                             </span>
                         </label>
                     </div>
@@ -85,6 +86,10 @@
                     </div>
                     <small style="display:block;margin-top:8px;color:#666;">Choose one or more systems — you can't adjust your selection later.</small>
                 </fieldset>
+            </div>
+
+            <div class="form-actions">
+                <button id="downloadBtn" type="button">Template erstellen & herunterladen</button>
             </div>
         </div>
     </main>
